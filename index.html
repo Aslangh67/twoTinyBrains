@@ -4,87 +4,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Two Tiny Brains</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- load CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/age.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
+   
+    <div id="ac-wrapper" style='display:none'>
+        <div id="popup">
+            <center>
+                 <h2>Website contains content of adult nature and is only available to adults. 
+                     If you are under the age of 18 (or 21 in some countries), if it is illegal 
+                     to view such material in your jurisdiction or it offends you, please do not continue.</h2>    
+                <input type="submit" name="submit" value="Submit" onClick="PopUp('hide')" class="pro"/>
+            </center>
+        </div>
+    </div>
 
-
-    <!-- <div class="container no-gutter "> -->
-
-
-
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <header class="text-center">
-                    <img src="./assets/images/Banner.png" alt="Banner" style="width: 100%;">
+            <div class="col-lg-12">
+                <header class="text-center tm-site-header">
+                    <img src="./img/Banner.png" alt="Banner" style="width: 100%;">
                 </header>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tm-video-container">
+                    <video id="tm-welcome-video" class="tm-welcome-video" autoplay="" loop="" muted="">
+                        <source src="videos/video.mp4" type="video/mp4"> Your browser does not support the video tag.
+                        </video>
+                        <div id="tm-video-loader"></div>
+                        <div id="tm-video-text-overlay" class="tm-video-text-overlay d-none">
+                            <h1>
+                                <div id="rotate" class="tm-video-text">
+                                    <div>This is...</div>
+                                    <div>Where...</div>
+                                    <div>The Show...</div>
+                                    <div>Happens!</div>
+                                </div>
+                            </h1>
+                        </div>
 
-        <div class="row mt-5">
-            <div class="col-md-12 d-flex justify-content-center">
-
-                <div class="ratio ratio-16x9">
-                    <video  autoplay="" loop="" muted="">
-                        <source src='./assets/video/video.mp4;codecs="avc1.42E01E, mp4a.40.2"' type="video/mp4">Your browser does not support the video tag.
-                    </video> 
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="row mainContent">
-
-            <div class="col-12">
-
-                <div class="row mb-5">
-                    <h3 class="col-12 text-center">
-                        Welcome to Two Tiny Brains!
-                    </h3>
-                </div>
-
-                <div class="row d-flex justify-content-center">
-
-
-                    <div class="col-6 col-md-3 d-flex justify-content-center ">
-
-                        <img class=" img-fluid rounded" src="./assets/images/cropped.png">
-                    
-                    </div>
-
-                    <div class=" col-10 col-md-6 audioBox p-2 ,">
-                   
-                        <div class="row">
-                            <h3 class="text-center  audioText">Coming Soon!</h3>
-                        </div>
-                        <div class="row  d-flex justify-content-center ">
-                            <audio class="col-10" controls preload="metadata" style=" width:300px;">
-                                <source src="Intro.mp3" type="audio/mpeg">
-                                    Your browser does not support the audio element.
-                                </audio><br><br><br>
-                            </div>
-                            
-                        </div>
-                        
-                        <div class="col-md-3 col-0"></div>
-                    </div>
-                    
+        <div class="container tm-container-2">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="tm-welcome-text">Welcome to Two Tiny Brains!</h2>
                 </div>
             </div>
+            <div class="row tm-section-mb">
+                <div class="col-lg-12">
+                    <div class=" tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="img/img-01.jpg" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <h3 class="tm-text-green tm-font-400">Coming Soon!</h3>
+                                    <!-- <p>In this episode, I am going to explain what is this podcast is about and 
+                                        some other none sense that needs to be said for some fools out there.</p>
+                                    <p class="tm-text-green float-right mb-0">Episode 100 . 15 OCT 2020</p> -->
+                                    <audio controls preload="metadata" style=" width:300px;">
+                                        <source src="Intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio><br />
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- </div> -->
+                        <!-- <div class="tm-timeline-connector-vertical"></div> -->
+                    </div>
+<!-- 
+                    <div class="tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="img/img-02.jpg" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark-light tm-timeline-description">
+                                    <h3 class="tm-text-cyan tm-font-400">Vestibulum ante ipsum primis</h3>
+                                    <p>In imperdiet nisl quis sapien pellentesque, non rhoncus elit sollicitudin. Donec pharetra egestas magna at eleifend. Sed non magna vitae enim tempus faucibus.</p>
+                                    <p class="tm-text-cyan float-right mb-0">Another Story . 9 July 2018</p>
+                                    <audio controls preload="metadata" style=" width:300px;">
+                                        <source src="Intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio><br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
 
+                    <div class="tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="img/img-03.jpg" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <h3 class="tm-text-yellow tm-font-400">Pellentesque accumsan convallis</h3>
+                                    <p>Suspendisse felis massa, maximus sed mauris at, elementum fermentum nisl. Aliquam quis elit vel ipsum ornare sollicitudin. Nulla et dolor eget nisi varius convallis.</p>
+                                    <p class="tm-text-yellow float-right mb-0">Latest News . 30 June 2018</p>
+                                    <audio controls preload="metadata" style=" width:300px;">
+                                        <source src="Intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio><br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
 
+                    <div class="tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="img/img-04.jpg" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark-light tm-timeline-description">
+                                    <h3 class="tm-text-orange tm-font-400">Lorem ipsum dolor sit amet</h3>
+                                    <p>Phasellus at quam facilisis sem congue lacinia. Fusce risus velit, bibendum in magna eu, sollicitudin pellentesque dolor. Nulla facilisi. Fusce libero mauris, maximus et liqula at.</p>
+                                    <p class="tm-text-orange float-right mb-0">New Project . 22 June 2018</p>
+                                    <audio controls preload="metadata" style=" width:300px;">
+                                        <source src="Intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio><br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tm-timeline-connector-vertical"></div>
+                    </div>
+                    <div class="tm-timeline-item">
+                        <div class="tm-timeline-item-inner">
+                            <img src="img/img-03.jpg" alt="Image" class="rounded-circle tm-img-timeline">
+                            <div class="tm-timeline-connector">
+                                <p class="mb-0">&nbsp;</p>
+                            </div>
+                            <div class="tm-timeline-description-wrap">
+                                <div class="tm-bg-dark tm-timeline-description">
+                                    <h3 class="tm-text-yellow tm-font-400">Pellentesque accumsan convallis</h3>
+                                    <p>Suspendisse felis massa, maximus sed mauris at, elementum fermentum nisl. Aliquam quis elit vel ipsum ornare sollicitudin. Nulla et dolor eget nisi varius convallis.</p>
+                                    <p class="tm-text-yellow float-right mb-0">Latest News . 30 June 2018</p>
+                                    <audio controls preload="metadata" style=" width:300px;">
+                                        <source src="Intro.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
 
+                </div>
+            </div>
+            <!--  row -->
+            <hr>
+            <div class="row tm-section-mb tm-section-mt">
+                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray" style="color: cyan;">What do we do here</h3>
+                    <p>We created this podcast to get away from this clustrofuck of a world and joke around and have fun. But not too far!</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 pr-lg-5 mb-md-0 mb-4">
+                    <h3 class="mt-2 mb-3 tm-text-gray" style="color: cyan;">How do we do it</h3>
+                    <p>Basically We do it how We want to do it. As easy as that! Also your suggestions are appresiated. Send them to us by email or insta.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="mt-2 mb-3 tm-text-gray" style="color: cyan;">How Do you get in touch</h3>
+                    <p>Email: <span><a href="mailto:twotinybrains@gmail.com">twotinybrains@gmail.com</a></span><br></p>
+                    <a href="https://www.instagram.com/twotinybrains/" style="color: #8a3ab9;" target="blank"><i class="fa fa-instagram" style="font-size:100px; margin-right: 40px;"></i></a>   
+                    <a href="https://www.youtube.com/channel/UC5EnzHZcCap8NuCtmTH4wyg" style="color: #FF0000;" target="blank"><i class="fa fa-youtube-play" style="font-size:100px"></i></a>
+                </div>
+            </div>
+            <hr>
+        <!-- Footer -->
+        <footer class="row mt-5 mb-5">
+            <div class="col-lg-12">
+                <p class="text-center tm-text-gray tm-copyright-text mb-0">Copyright &copy;
+                    <span class="tm-current-year">2022</span> Tow Tiny Brains
+                </p>
+            </div>
+        </footer>
+    </div>
+    <!-- .container -->
 
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="js/script.js"></script>
+    <script src="js/age.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
 </body>
-
 </html>
